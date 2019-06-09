@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<ul id="contenedor">
+
+</ul>
+
+
+<script> //document.write(dias[dia])
+
+let dia = 5
+
+let dias = new Array('lunes','martes','miercoles','jueves','viernes','sabado','domingo')
+
+let diasLaborales = dias.filter(function(item){
+    return item != 'sabado' && item != 'domingo'
+})
+
+for (let i = 0; i < diasLaborales.length; i++){
+    document.write(diasLaborales[i]+"<br>") //br salto de linea
+}
+
+
+
+
+</script>
+</body>
+</html>

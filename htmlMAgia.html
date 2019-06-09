@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Magia</title>
+    <style>
+    .verde{
+        color: green
+    }
+    </style>
+</head>
+<body>
+    <div id="saludos">
+        <h1 id="titulo"></h1>
+    </div>
+    
+    <input type="text" id="entrada">
+    <br>
+    <br>
+    <button id="btn">Saludar</button>
+    <p id="cantidades"></p>
+    <script>
+
+        let cantidadDeSaludos = 0
+        let titulo = document.getElementById('titulo')
+        let entrada1 = document.getElementById('entrada')
+        let btn = document.getElementById('btn')
+        let contenedor =  document.getElementById('saludos')
+        let cantidades = document.getElementById('cantidades')
+        
+
+        btn.addEventListener('click',function(){
+            cantidadDeSaludos++
+            let tipo = entrada1.value
+            if(tipo != '' ) {
+            let saludito = 'Invitado: ' + tipo 
+            var saludos = document.createElement('h1')
+            var txt = document.createTextNode(saludito)
+            saludos.appendChild(txt)
+            contenedor.appendChild(saludos)
+            if (cantidadDeSaludos>1){
+            cantidades.innerHTML = ' Saludamos a ' + cantidadDeSaludos + ' personas'
+            }else{
+                cantidades.innerHTML = ' Saludamos a ' + cantidadDeSaludos + ' persona' 
+            }
+            }
+        })
+
+        document.addEventListener('click',function(e){
+            if(e.target.localName == 'h1'){
+                e.target.innerHTML = e.target.innerHTML + ' asistio'
+                e.target.classList.add('verde')
+            }  
+        })
+            
+            
+            
+            //titulo.innerHTML = `Hola ${tipo} todo bien? `
+        
+     
+    </script>
+</body>
+</html>

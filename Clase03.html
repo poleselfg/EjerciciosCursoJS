@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS clase 3</title>
+</head>
+<body>
+
+
+  <script>
+      let nombre = 'pepe'  
+      let apellido = 'solito'
+      console.log(nombre+' '+apellido.toUpperCase()) //pone todo mayuscula la variable (tolowercase pone todo minuscula)
+      console.log(nombre, apellido) 
+      console.log('Cantidad de letras del apellido:' + apellido.length) //muestra cantidad caracteres de variable
+      console.log('Primer letra del apellido es: ' + apellido.substr(0,2)) //muestra caracteres del 0 al 2, del string apellido
+
+      console.log('Hola '+nombre+' como estas hoy?, tu apellido es '+apellido+' no?, empieza con '+apellido.substr(0,1)+'?')
+
+      // interpolacion de texto
+
+      let resultado = `Hola querido ${nombre} como estas?`
+      console.log(resultado)
+      
+  </script>  
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS argunmentos a funciones</title>
+</head>
+<body>
+    <script>
+            /*nombres perros
+    let paco = 8
+    let olivia = 2
+    let mirko = 3
+
+    function calcularEdad(edad, nombre){
+        let calculo = edad*7
+        console.log(` ${nombre} tiene ${calculo} años `)
+        
+    }   
+
+    calcularEdad(olivia,"Olivia")*/
+
+    //funciones que retornan valores 
+
+    let paco = 8
+    let olivia = 2
+    let mirko = 3
+
+    function calcularEdad(edad, nombre){
+        let calculo = edad*7
+        return calculo     //Return mata la funcion
+        
+    }   
+
+    let edadTotal = calcularEdad(paco) + calcularEdad(olivia) + calcularEdad(mirko)
+    console.log(edadTotal)
+    
+    </script>
+</body>
+</html>
