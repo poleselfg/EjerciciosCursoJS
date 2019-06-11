@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class Humano{
+        constructor(nombre,edad,email){
+            this._nombre = nombre
+            this._edad = edad
+            this._email = email
+        }
+        saludar(){
+            document.write('Hola ' + this._nombre + "<br>")
+        }  
+        get nombre(){
+            return this._nombre;
+        }  
+        set nombre(nombre){
+            this._nombre = nombre;
+
+        }
+        get edad(){
+            return this._edad
+        }
+        set edad(edad){
+            this._edad = edad
+        }
+        get email(){
+            return this._email
+        }
+        set email(email){
+            this._email = email
+        }
+        
+    }
+
+    let marcos = new Humano ('marcos',32,'fnidsj@gmail.com')
+
+marcos.nombre = "federico"
+marcos.email = "fgpolesel@gmail.com"
+marcos.edad = 27
+marcos.saludar()
+console.log(marcos.nombre)
+console.log(marcos.edad)
+console.log(marcos.email)
+
+
+</script>
+</body>
+</html>

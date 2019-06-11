@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class Humano{
+        constructor(nombre,edad,email){
+            this.nombre = nombre
+            this.edad = edad
+            this.email = email
+        }
+        saludar(){
+            document.write('Hola ' + this.nombre + "<br>")
+        }    
+    }
+
+    class Alumno extends Humano{
+        comprar(){
+            document.write( this.nombre + ' compro un curso' + "<br>")
+        }
+    }
+
+    class Profe extends Humano{
+        calificar(){
+            document.write(this.nombre + ' califico' + "<br>")
+        }
+        saludar(){
+            document.write('Hola Profe ' + this.nombre + "<br>")
+        }
+    }
+
+    let marcos = new Alumno ('marcos',32,'fnidsj@gmail.com')
+    let fede = new Profe ('federico',35,'dsadsaj@gmail.com')
+
+
+
+//document.write(marcos.nombre + "<br>")
+//marcos.comprar()
+//document.write(fede.nombre + "<br>")
+//fede.calificar()
+
+// soobreescribir el saludo en la class profe, sobreescribe la clase
+
+fede.saludar()
+marcos.saludar()
+
+</script>
+</body>
+</html>
